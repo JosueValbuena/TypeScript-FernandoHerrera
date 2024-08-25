@@ -1,0 +1,44 @@
+instalar typescript en proyecto - usual
+npm install typescript --save-dev
+
+instalar de manera global
+npm install -g typescript
+
+version instalada
+tsc --version
+
+iniciart typescript
+tsc --init
+
+traspilar archivos de ts a js
+tsc nombre_archivo.js
+
+traspilacion general de archivos
+tcs
+
+transpilar los cambios automaticamente de ts a js
+tcs --watch || tcs -w
+
+Mostrar en consola el linea donde se ejecuta el console.log en archivo TS.
+tsconfig.json => "sourceMap": true
+
+remover comentarios en la traspilacion
+tsconfig.json => "removeComments": true
+
+ignorar o incluir (esto quitara los archivos incluidos por defecto
+e incluira solo lo que seleccionemos) archivos a transpilar
+{
+    "compilerOptions":{
+        ...
+    },
+    "exclude":[
+        "nombre_archivo o carpeta"
+    ],
+    "include":[
+        "nombre_archivo o carpeta"
+    ],
+}
+
+Centralizar todos los archivos .ts y .js.map en un solo archivo .js
+tsconfig.json => "outFile": "./main.js"
+tsconfig.json => "module": "amd"
